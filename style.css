@@ -1,0 +1,252 @@
+:root {
+    --peach-light: #FFDAB9;
+    --peach: #FFB6A3;
+    --peach-dark: #FF8C7F;
+    --green-light: #98FB98;
+    --green: #90EE90;
+    --green-dark: #3CB371;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 20px;
+    z-index: 1000;
+    border-radius: 15px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1000px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 25px;
+    min-height: 60px;
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--green-dark);
+}
+
+.logo span {
+    color: var(--peach-dark);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: var(--green-dark);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--peach-light), var(--green-light));
+    padding: 10rem 0;
+    text-align: center;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--green-dark);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(60, 179, 113, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(60, 179, 113, 0.4);
+    background-color: var(--green);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--green-dark);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        top: 10px;
+        width: 95%;
+    }
+
+    header .container {
+        padding: 0.8rem 20px;
+        min-height: 50px;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        padding: 6rem 0;
+        min-height: 600px;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Animation for hamburger menu */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -5px);
+} 
