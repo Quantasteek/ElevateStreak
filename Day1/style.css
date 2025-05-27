@@ -193,7 +193,7 @@ a{
     }
 
     .nav-links {
-        display: none;
+        display: flex;
         position: absolute;
         top: 100%;
         left: 0;
@@ -209,10 +209,16 @@ a{
         border-radius: 0;
         margin-top: 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
     }
 
     .nav-links.active {
-        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
 
     .hamburger {
