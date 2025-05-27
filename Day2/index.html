@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>Todo List <i class="fas fa-list"></i></h2>
+            <div class="input-section">
+                <input type="text" id="taskInput" placeholder="Add your task">
+                <button id="addBtn">Add</button>
+            </div>
+            <div class="tasks-container">
+                <div class="tasks-tabs">
+                    <button class="tab-btn active" data-tab="all">All</button>
+                    <button class="tab-btn" data-tab="active">Active</button>
+                    <button class="tab-btn" data-tab="completed">Completed</button>
+                </div>
+                <div class="tasks-content">
+                    <div class="tasks-section active" id="all-tasks">
+                        <ul id="allTaskList" class="task-list">
+                        </ul>
+                    </div>
+                    <div class="tasks-section" id="active-tasks">
+                        <ul id="activeTaskList" class="task-list">
+                        </ul>
+                    </div>
+                    <div class="tasks-section" id="completed-tasks">
+                        <ul id="completedTaskList" class="task-list">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="scroll-to-top" title="Scroll to top">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>
