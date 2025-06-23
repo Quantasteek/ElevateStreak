@@ -78,10 +78,3 @@ The layout has been tested across various devices and screen sizes to ensure:
 - Consistent typography
 - Optimal spacing and margins
 
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS/Android)
